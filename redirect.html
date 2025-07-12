@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting to platform...</title>
+  <script>
+    // 你可以放多个平台链接实现分流
+    const links = ["https://ak.bet/"];
+    const index = localStorage.getItem("platform_index") || 0;
+    const nextIndex = (parseInt(index) + 1) % links.length;
+    localStorage.setItem("platform_index", nextIndex);
+    // 延迟1.5秒跳转
+    setTimeout(() => {
+      window.location.href = links[index];
+    }, 1500);
+  </script>
+</head>
+<body>
+  <p>Dear, please wait... redirecting to our platform.</p>
+</body>
+</html>

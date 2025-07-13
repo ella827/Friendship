@@ -11,8 +11,9 @@
       padding-top: 50px;
     }
     img.logo {
-      width: 180px;
+      width: 220px;
       margin-bottom: 20px;
+      border-radius: 10px;
     }
     img.loading {
       width: 60px;
@@ -24,11 +25,11 @@
     }
   </style>
   <script>
-    // 平台链接（可以添加多个）
     const links = ["https://ak.bet/"];
     const index = localStorage.getItem("platform_index") || 0;
     const nextIndex = (parseInt(index) + 1) % links.length;
     localStorage.setItem("platform_index", nextIndex);
+    
     // 延迟跳转
     setTimeout(() => {
       window.location.href = links[index];
@@ -36,11 +37,13 @@
   </script>
 </head>
 <body>
-  <!-- 平台 Logo 或宣传图 -->
-  <img class="logo" src="https://img.engames.com/cdn-cgi/image/format=auto/ak/1752074234836522762.jpeg" alt="AKBET Logo">
-  <!-- 提示语 -->
+  <!-- 你提供的图片作为平台图 -->
+  <img class="logo" src="https://i.postimg.cc/G23m4ZQP/photo-2025-07-09-16-14-34.jpg" alt="AKBET Promo">
+
+  <!-- 跳转提示语 -->
   <p>Dear, please wait... you’re being redirected to our official platform.</p>
-  <!-- 加载动画（你可以换成你自己的GIF） -->
+
+  <!-- 加载动画 -->
   <img class="loading" src="https://i.gifer.com/YCZH.gif" alt="Loading...">
 </body>
 </html>

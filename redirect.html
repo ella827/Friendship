@@ -2,20 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting to platform...</title>
+  <title>Redirecting to AKBET...</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #ffffff;
+      padding-top: 50px;
+    }
+    img.logo {
+      width: 180px;
+      margin-bottom: 20px;
+    }
+    img.loading {
+      width: 60px;
+      margin-top: 20px;
+    }
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
   <script>
-    // 你可以放多个平台链接实现分流
+    // 平台链接（可以添加多个）
     const links = ["https://ak.bet/"];
     const index = localStorage.getItem("platform_index") || 0;
     const nextIndex = (parseInt(index) + 1) % links.length;
     localStorage.setItem("platform_index", nextIndex);
-    // 延迟1.5秒跳转
+    // 延迟跳转
     setTimeout(() => {
       window.location.href = links[index];
     }, 1500);
   </script>
 </head>
 <body>
-  <p>Dear, please wait... redirecting to our platform.</p>
+  <!-- 平台 Logo 或宣传图 -->
+  <img class="logo" src="https://img.engames.com/cdn-cgi/image/format=auto/ak/1752074234836522762.jpeg" alt="AKBET Logo">
+  <!-- 提示语 -->
+  <p>Dear, please wait... you’re being redirected to our official platform.</p>
+  <!-- 加载动画（你可以换成你自己的GIF） -->
+  <img class="loading" src="https://i.gifer.com/YCZH.gif" alt="Loading...">
 </body>
 </html>

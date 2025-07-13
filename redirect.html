@@ -29,21 +29,15 @@
     const index = localStorage.getItem("platform_index") || 0;
     const nextIndex = (parseInt(index) + 1) % links.length;
     localStorage.setItem("platform_index", nextIndex);
-    
-    // 延迟跳转
+
     setTimeout(() => {
       window.location.href = links[index];
     }, 1500);
   </script>
 </head>
 <body>
-  <!-- 你提供的图片作为平台图 -->
-  <img class="logo" src="https://i.postimg.cc/G23m4ZQP/photo-2025-07-09-16-14-34.jpg" alt="AKBET Promo">
-
-  <!-- 跳转提示语 -->
+  <img class="logo" src="https://i.imgur.com/rFC3Spm.png" alt="AKBET Logo">
   <p>Dear, please wait... you’re being redirected to our official platform.</p>
-
-  <!-- 加载动画 -->
   <img class="loading" src="https://i.gifer.com/YCZH.gif" alt="Loading...">
 </body>
 </html>
